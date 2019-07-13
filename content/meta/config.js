@@ -1,7 +1,7 @@
 module.exports = {
   siteTitle: 'David Asaf - Web Engineer', // <title>
   shortSiteTitle: 'David Asaf - Web Engineer', // <title> ending for posts and pages
-  siteDescription: 'David Asaf lives in Charlotte, NC and is a senior front end machien learning engineer',
+  siteDescription: 'David Asaf lives in Charlotte, NC and is a senior front end machine learning engineer',
   siteUrl: 'https://davideasaf.com',
   pathPrefix: '',
   siteImage: 'preview.png',
