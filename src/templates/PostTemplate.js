@@ -1,12 +1,12 @@
-import PropTypes from "prop-types";
-import React from "react";
-import { graphql } from "gatsby";
-require("prismjs/themes/prism-okaidia.css");
+import PropTypes from 'prop-types';
+import React from 'react';
+import { graphql } from 'gatsby';
+require('prismjs/themes/prism-okaidia.css');
 
-import Seo from "../components/Seo";
-import Article from "../components/Article";
-import Post from "../components/Post";
-import { ThemeContext } from "../layouts";
+import Seo from '../components/Seo';
+import Article from '../components/Article';
+import Post from '../components/Post';
+import { ThemeContext } from '../layouts';
 
 const PostTemplate = props => {
   const {
@@ -25,14 +25,7 @@ const PostTemplate = props => {
       <ThemeContext.Consumer>
         {theme => (
           <Article theme={theme}>
-            <Post
-              post={post}
-              next={next}
-              prev={prev}
-              authornote={authorNote}
-              facebook={facebook}
-              theme={theme}
-            />
+            <Post post={post} next={next} prev={prev} authornote={authorNote} facebook={facebook} theme={theme} />
           </Article>
         )}
       </ThemeContext.Consumer>
@@ -63,6 +56,7 @@ export const postQuery = graphql`
         title
         author
         category
+        description
         cover {
           childImageSharp {
             resize(width: 300) {
