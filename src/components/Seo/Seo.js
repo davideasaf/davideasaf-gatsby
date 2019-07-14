@@ -11,7 +11,7 @@ const Seo = props => {
   const postSlug = ((data || {}).fields || {}).slug;
   const title = postTitle ? `${postTitle} - ${config.shortSiteTitle}` : config.siteTitle;
   const description = postDescription ? postDescription : config.siteDescription;
-  const image = postCover ? postCover : config.siteImage;
+  const image = postCover ? `${config.siteUrl}${postCover.publicURL}` : config.siteImage;
   const url = config.siteUrl + config.pathPrefix + postSlug;
 
   return (
@@ -33,6 +33,10 @@ const Seo = props => {
       {/* <meta property="fb:app_id" content={facebook.appId} /> */}
       {/* Twitter Card tags */}
       <meta name="twitter:card" content="summary" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:url" content={url} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image} />
       {/* <meta name="twitter:creator" content={config.authorTwitterAccount ? config.authorTwitterAccount : ''} /> */}
     </Helmet>
   );
