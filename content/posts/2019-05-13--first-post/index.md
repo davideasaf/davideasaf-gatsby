@@ -3,7 +3,7 @@ title: My first post
 description: This is the first post that i'm making on my website.
 category: "general"
 cover: photo-8329489239401274-732748234.jpg
-author: david asaf
+author: David Asaf
 ---
 
 Welcome to my first post!

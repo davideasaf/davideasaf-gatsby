@@ -58,6 +58,7 @@ export const postQuery = graphql`
         category
         description
         cover {
+          publicURL
           childImageSharp {
             resize(width: 300) {
               src

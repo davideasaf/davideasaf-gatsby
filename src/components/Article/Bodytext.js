@@ -1,5 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const Bodytext = props => {
   const { html, theme } = props;
@@ -12,6 +12,12 @@ const Bodytext = props => {
         .bodytext {
           animation-name: bodytextEntry;
           animation-duration: ${theme.time.duration.long};
+
+          :global(iframe) {
+            width: 88vw;
+            height: 115vh;
+            transform: translate(-16vw, 0vh);
+          }
 
           :global(h2),
           :global(h3) {
