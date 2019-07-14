@@ -1,7 +1,7 @@
 ---
 title: JS .reduce() vs .map() + .filter()
 description: When filtering and changing a colleciton at the same time, is chaining filter() + map() faster than using reduce()? This post goes into detail on how reduce is the efficient choice. 
-category: "general"
+category: "javascript"
 cover: nathan-dumlao-eksqjXTLpak-unsplash.jpg
 author: David Asaf
 ---
