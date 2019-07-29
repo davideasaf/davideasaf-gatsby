@@ -49,9 +49,9 @@ interface ISampleObject {
 
 1 test will:
 
-1. Iterate over `1000` `ISampleObject`s
-2. Filter out all `ISampleObject`s that have an `id <= 50`.
-3. Take only the `name` value and return an array of name values
+- Iterate over `1000` `ISampleObject`s
+- Filter out all `ISampleObject`s that have an `id <= 50`.
+- Take only the `name` value and return an array of name values
 
 For each one of the above tests, I will record whether using a `.filter()` + `.map()` method works faster or a `.reduce()` method works faster. I will run the above test `100` times and record the number of test winds each method has.
 
