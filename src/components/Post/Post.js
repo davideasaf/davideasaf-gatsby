@@ -9,6 +9,7 @@ import Meta from './Meta';
 import Author from './Author';
 import Comments from './Comments';
 import NextPrev from './NextPrev';
+import { DiscussionEmbed } from 'disqus-react';
 
 const Share = asyncComponent(() =>
   import('./Share')
@@ -33,6 +34,11 @@ const Post = props => {
     theme
   } = props;
 
+  const disqusConfig = {
+    shortname: process.env.GATSBY_DISQUS_NAME,
+    config: { identifier: slug, title }
+  };
+
   return (
     <React.Fragment>
       <header>
@@ -44,6 +50,7 @@ const Post = props => {
         <Share post={post} theme={theme} />
         <Author note={authornote} theme={theme} />
         <NextPrev next={nextPost} prev={prevPost} theme={theme} />
+        <DiscussionEmbed {...disqusConfig} />
         {/* <Comments slug={slug} facebook={facebook} theme={theme} /> */}
       </footer>
     </React.Fragment>
