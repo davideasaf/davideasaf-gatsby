@@ -1,7 +1,7 @@
 {
   "name": "davideasaf",
   "version": "2.0.0",
-  "author": "David Asaf <asaf.david.e@gmail.com>",
+  "author": "David Asaf <me@davideasaf.com>",
   "dependencies": {
     "antd": "^3.7.0",
     "disqus-react": "^1.0.6",

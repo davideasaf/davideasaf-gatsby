@@ -1,10 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { TwitterIcon, LinkedinIcon } from 'react-share';
+import { authorSocialLinks } from './../../../content/meta/config';
 import { FaArrowDown } from 'react-icons/fa/';
+import Github from './../../images/svg-icons/github.svg';
 
 const Hero = props => {
   const { scrollToContent, backgrounds, theme } = props;
+  const iconSize = 36;
 
   return (
     <React.Fragment>
@@ -16,10 +19,38 @@ const Hero = props => {
         <button onClick={scrollToContent} aria-label="scroll">
           <FaArrowDown />
         </button>
+        <div className="social-links">
+          <a href={authorSocialLinks.twitter} target="_blank" className="social-container">
+            <TwitterIcon round size={iconSize} className="test" />
+          </a>
+          <a href={authorSocialLinks.linkedIn} target="_blank" className="social-container">
+            <LinkedinIcon round size={iconSize} />
+          </a>
+          <a href={authorSocialLinks.github} target="_blank" className="social-container">
+            <Github height="36" width="36" style={{ borderRadius: '2em', backgroundColor: 'white' }} />
+          </a>
+        </div>
       </section>
 
       {/* --- STYLES --- */}
       <style jsx>{`
+        .social-links {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: 1em;
+
+          a {
+            width: 36px;
+            height: 36px;
+          }
+
+          :global(.social-container) {
+            margin: 0em 0.8em;
+            cursor: pointer;
+          }
+        }
+
         .hero {
           align-items: center;
           background: ${theme.hero.background};

@@ -31,9 +31,15 @@ module.exports = {
   gravatarImgMd5: '',
 
   // social
-  authorSocialLinks: [
-    { name: 'github', url: 'https://github.com/davideasaf' }
-    // { name: 'twitter', url: 'https://twitter.com/greglobinski' },
-    // { name: 'facebook', url: 'http://facebook.com/greglobinski' }
-  ]
+  // authorSocialLinks: [
+  //   { name: 'github', url: 'https://github.com/davideasaf' },
+  //   { name: 'twitter', url: 'https://twitter.com/davideasaf' }
+  //   // { name: 'facebook', url: 'http://facebook.com/greglobinski' }
+  // ]
+
+  authorSocialLinks: {
+    twitter: 'https://www.twitter.com/davideasaf',
+    linkedIn: 'https://www.linkedin.com/in/davideasaf/',
+    github: 'https://www.github.com/davideasaf'
+  }
 };
