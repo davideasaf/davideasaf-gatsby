@@ -20,6 +20,7 @@ collections:
   - name: 'pages'
     label: 'Pages'
     folder: 'content/pages'
+    path: '{{title}}/index'
     create: true
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
